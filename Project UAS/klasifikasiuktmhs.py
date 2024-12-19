@@ -1,3 +1,6 @@
+# Lyra Attallah Aurellia_F55123014
+# Klasifikasi kelayakan keringanan UKT
+
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
@@ -68,9 +71,11 @@ def plot_confusion_matrix(y_true, y_pred, title):
     plt.title(title)
     plt.show()
 
+# Visualisasi Confusion Matrix
 plot_confusion_matrix(y_test, y_pred_test, "Confusion Matrix - Data Testing")
 plot_confusion_matrix(y_val, y_pred_val, "Confusion Matrix - Data Validasi")
 
+# Fungsi 6: Visualisasi pentingnya fitur
 def plot_feature_importance(model, feature_names):
     print("\n=== Plot Pentingnya Fitur ===")
     importances = model.feature_importances_
